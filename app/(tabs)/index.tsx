@@ -2,8 +2,9 @@ import { Image, StyleSheet, Platform } from 'react-native';
 
 import { HelloWave } from '@/components/HelloWave';
 import ParallaxScrollView from '@/components/ParallaxScrollView';
-import { ThemedText } from '@/components/ThemedText';
 import { ThemedView } from '@/components/ThemedView';
+import { Typography } from '@/components/atoms';
+
 
 export default function HomeScreen() {
   return (
@@ -16,39 +17,39 @@ export default function HomeScreen() {
         />
       }>
       <ThemedView style={styles.titleContainer}>
-        <ThemedText type="title">Welcome!</ThemedText>
+        <Typography variant="header1">Welcome!</Typography>
         <HelloWave />
       </ThemedView>
       <ThemedView style={styles.stepContainer}>
-        <ThemedText type="subtitle">Step 1: Try it</ThemedText>
-        <ThemedText>
-          Edit <ThemedText type="defaultSemiBold">app/(tabs)/index.tsx</ThemedText> to see changes.
+        <Typography variant="subTitle1">Step 1: Try it</Typography>
+        <Typography>
+          Edit <Typography bold>app/(tabs)/index.tsx</Typography> to see changes.
           Press{' '}
-          <ThemedText type="defaultSemiBold">
+          <Typography bold>
             {Platform.select({
               ios: 'cmd + d',
               android: 'cmd + m',
               web: 'F12'
             })}
-          </ThemedText>{' '}
+          </Typography>{' '}
           to open developer tools.
-        </ThemedText>
+        </Typography>
       </ThemedView>
       <ThemedView style={styles.stepContainer}>
-        <ThemedText type="subtitle">Step 2: Explore</ThemedText>
-        <ThemedText>
+        <Typography variant="subTitle1">Step 2: Explore</Typography>
+        <Typography>
           Tap the Explore tab to learn more about what's included in this starter app.
-        </ThemedText>
+        </Typography>
       </ThemedView>
       <ThemedView style={styles.stepContainer}>
-        <ThemedText type="subtitle">Step 3: Get a fresh start</ThemedText>
-        <ThemedText>
+        <Typography variant="subTitle1">Step 3: Get a fresh start</Typography>
+        <Typography>
           When you're ready, run{' '}
-          <ThemedText type="defaultSemiBold">npm run reset-project</ThemedText> to get a fresh{' '}
-          <ThemedText type="defaultSemiBold">app</ThemedText> directory. This will move the current{' '}
-          <ThemedText type="defaultSemiBold">app</ThemedText> to{' '}
-          <ThemedText type="defaultSemiBold">app-example</ThemedText>.
-        </ThemedText>
+          <Typography bold>npm run reset-project</Typography> to get a fresh{' '}
+          <Typography bold>app</Typography> directory. This will move the current{' '}
+          <Typography bold>app</Typography> to{' '}
+          <Typography bold>app-example</Typography>.
+        </Typography>
       </ThemedView>
     </ParallaxScrollView>
   );
